@@ -27,6 +27,6 @@ flow = OTDD_Gradient_Flow(loaders_src['train'], loaders_tgt['train'],
                           ### OTDD Args                          
                           online_stats=True,
                           diagonal_cov = False,
-                          device='cpu'
+                          device='cuda'
                           )
 d,out = flow.flow()
