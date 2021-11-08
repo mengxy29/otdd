@@ -27,4 +27,5 @@ opentsne
 watermark
 seaborn
 celluloid
-git+https://github.com/rossant/ipycache
+ipycache
+cupy

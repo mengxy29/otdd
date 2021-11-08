@@ -132,3 +132,6 @@ dmypy.json
 # Dont Save Data or Models
 data/
 models/
+
+# vscode setting
+.vscode/
