@@ -135,3 +135,6 @@ models/
 
 # vscode setting
 .vscode/
+
+# out file
+out/

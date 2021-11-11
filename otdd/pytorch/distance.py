@@ -806,7 +806,8 @@ class DatasetDistance():
         if gpu is None:
             gpu = self.device != 'cpu'
         if 'method' in kwargs and kwargs['method'] == 'emd':
-            π = ot.emd(a, b, C / C.max())
+            C_narray = (C / C.max()).numpy()
+            π = ot.emd(a, b, C_narray)
         elif not gpu:
             π = ot.sinkhorn(a, b, C / C.max(), entreg, **kwargs)
         else:

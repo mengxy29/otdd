@@ -17,7 +17,8 @@ callbacks = CallbackList([
 
 flow = OTDD_Gradient_Flow(loaders_src['train'], loaders_tgt['train'],
                           ### Gradient Flow Args
-                          method = 'xonly-attached',                          
+                          # method = 'xonly-attached',                          
+                          method = 'xonly',                          
                           use_torchoptim=True,
                           optim='adam',
                           steps=10,
@@ -27,6 +28,6 @@ flow = OTDD_Gradient_Flow(loaders_src['train'], loaders_tgt['train'],
                           ### OTDD Args                          
                           online_stats=True,
                           diagonal_cov = False,
-                          device='cuda'
+                          device='cpu'
                           )
 d,out = flow.flow()
